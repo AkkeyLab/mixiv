@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66DF19121D7BD26000253B39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF19111D7BD26000253B39 /* AppDelegate.swift */; };
+		66DF19141D7BD26000253B39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF19131D7BD26000253B39 /* ViewController.swift */; };
+		66DF19171D7BD26000253B39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66DF19151D7BD26000253B39 /* Main.storyboard */; };
+		66DF19191D7BD26000253B39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66DF19181D7BD26000253B39 /* Assets.xcassets */; };
+		66DF191C1D7BD26000253B39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66DF191A1D7BD26000253B39 /* LaunchScreen.storyboard */; };
+		66DF19271D7BD26100253B39 /* mixivTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF19261D7BD26100253B39 /* mixivTests.swift */; };
+		66DF19321D7BD26100253B39 /* mixivUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF19311D7BD26100253B39 /* mixivUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66DF19231D7BD26100253B39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66DF19061D7BD26000253B39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66DF190D1D7BD26000253B39;
+			remoteInfo = mixiv;
+		};
+		66DF192E1D7BD26100253B39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66DF19061D7BD26000253B39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66DF190D1D7BD26000253B39;
+			remoteInfo = mixiv;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		66DF190E1D7BD26000253B39 /* mixiv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mixiv.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66DF19111D7BD26000253B39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		66DF19131D7BD26000253B39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		66DF19161D7BD26000253B39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		66DF19181D7BD26000253B39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		66DF191B1D7BD26000253B39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		66DF191D1D7BD26000253B39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66DF19221D7BD26100253B39 /* mixivTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mixivTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66DF19261D7BD26100253B39 /* mixivTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mixivTests.swift; sourceTree = "<group>"; };
+		66DF19281D7BD26100253B39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66DF192D1D7BD26100253B39 /* mixivUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mixivUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66DF19311D7BD26100253B39 /* mixivUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mixivUITests.swift; sourceTree = "<group>"; };
+		66DF19331D7BD26100253B39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66DF190B1D7BD26000253B39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66DF191F1D7BD26100253B39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66DF192A1D7BD26100253B39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66DF19051D7BD26000253B39 = {
+			isa = PBXGroup;
+			children = (
+				66DF19101D7BD26000253B39 /* mixiv */,
+				66DF19251D7BD26100253B39 /* mixivTests */,
+				66DF19301D7BD26100253B39 /* mixivUITests */,
+				66DF190F1D7BD26000253B39 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		66DF190F1D7BD26000253B39 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66DF190E1D7BD26000253B39 /* mixiv.app */,
+				66DF19221D7BD26100253B39 /* mixivTests.xctest */,
+				66DF192D1D7BD26100253B39 /* mixivUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66DF19101D7BD26000253B39 /* mixiv */ = {
+			isa = PBXGroup;
+			children = (
+				66DF19111D7BD26000253B39 /* AppDelegate.swift */,
+				66DF19131D7BD26000253B39 /* ViewController.swift */,
+				66DF19151D7BD26000253B39 /* Main.storyboard */,
+				66DF19181D7BD26000253B39 /* Assets.xcassets */,
+				66DF191A1D7BD26000253B39 /* LaunchScreen.storyboard */,
+				66DF191D1D7BD26000253B39 /* Info.plist */,
+			);
+			path = mixiv;
+			sourceTree = "<group>";
+		};
+		66DF19251D7BD26100253B39 /* mixivTests */ = {
+			isa = PBXGroup;
+			children = (
+				66DF19261D7BD26100253B39 /* mixivTests.swift */,
+				66DF19281D7BD26100253B39 /* Info.plist */,
+			);
+			path = mixivTests;
+			sourceTree = "<group>";
+		};
+		66DF19301D7BD26100253B39 /* mixivUITests */ = {
+			isa = PBXGroup;
+			children = (
+				66DF19311D7BD26100253B39 /* mixivUITests.swift */,
+				66DF19331D7BD26100253B39 /* Info.plist */,
+			);
+			path = mixivUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66DF190D1D7BD26000253B39 /* mixiv */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66DF19361D7BD26100253B39 /* Build configuration list for PBXNativeTarget "mixiv" */;
+			buildPhases = (
+				66DF190A1D7BD26000253B39 /* Sources */,
+				66DF190B1D7BD26000253B39 /* Frameworks */,
+				66DF190C1D7BD26000253B39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mixiv;
+			productName = mixiv;
+			productReference = 66DF190E1D7BD26000253B39 /* mixiv.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66DF19211D7BD26100253B39 /* mixivTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66DF19391D7BD26100253B39 /* Build configuration list for PBXNativeTarget "mixivTests" */;
+			buildPhases = (
+				66DF191E1D7BD26100253B39 /* Sources */,
+				66DF191F1D7BD26100253B39 /* Frameworks */,
+				66DF19201D7BD26100253B39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66DF19241D7BD26100253B39 /* PBXTargetDependency */,
+			);
+			name = mixivTests;
+			productName = mixivTests;
+			productReference = 66DF19221D7BD26100253B39 /* mixivTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		66DF192C1D7BD26100253B39 /* mixivUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66DF193C1D7BD26100253B39 /* Build configuration list for PBXNativeTarget "mixivUITests" */;
+			buildPhases = (
+				66DF19291D7BD26100253B39 /* Sources */,
+				66DF192A1D7BD26100253B39 /* Frameworks */,
+				66DF192B1D7BD26100253B39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66DF192F1D7BD26100253B39 /* PBXTargetDependency */,
+			);
+			name = mixivUITests;
+			productName = mixivUITests;
+			productReference = 66DF192D1D7BD26100253B39 /* mixivUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66DF19061D7BD26000253B39 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = AkkeyLab;
+				TargetAttributes = {
+					66DF190D1D7BD26000253B39 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					66DF19211D7BD26100253B39 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 66DF190D1D7BD26000253B39;
+					};
+					66DF192C1D7BD26100253B39 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 66DF190D1D7BD26000253B39;
+					};
+				};
+			};
+			buildConfigurationList = 66DF19091D7BD26000253B39 /* Build configuration list for PBXProject "mixiv" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 66DF19051D7BD26000253B39;
+			productRefGroup = 66DF190F1D7BD26000253B39 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66DF190D1D7BD26000253B39 /* mixiv */,
+				66DF19211D7BD26100253B39 /* mixivTests */,
+				66DF192C1D7BD26100253B39 /* mixivUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66DF190C1D7BD26000253B39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66DF191C1D7BD26000253B39 /* LaunchScreen.storyboard in Resources */,
+				66DF19191D7BD26000253B39 /* Assets.xcassets in Resources */,
+				66DF19171D7BD26000253B39 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66DF19201D7BD26100253B39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66DF192B1D7BD26100253B39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66DF190A1D7BD26000253B39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66DF19141D7BD26000253B39 /* ViewController.swift in Sources */,
+				66DF19121D7BD26000253B39 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66DF191E1D7BD26100253B39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66DF19271D7BD26100253B39 /* mixivTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66DF19291D7BD26100253B39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66DF19321D7BD26100253B39 /* mixivUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66DF19241D7BD26100253B39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66DF190D1D7BD26000253B39 /* mixiv */;
+			targetProxy = 66DF19231D7BD26100253B39 /* PBXContainerItemProxy */;
+		};
+		66DF192F1D7BD26100253B39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66DF190D1D7BD26000253B39 /* mixiv */;
+			targetProxy = 66DF192E1D7BD26100253B39 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		66DF19151D7BD26000253B39 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66DF19161D7BD26000253B39 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		66DF191A1D7BD26000253B39 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66DF191B1D7BD26000253B39 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		66DF19341D7BD26100253B39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66DF19351D7BD26100253B39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		66DF19371D7BD26100253B39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = mixiv/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akkeylab.mixiv;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		66DF19381D7BD26100253B39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = mixiv/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akkeylab.mixiv;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		66DF193A1D7BD26100253B39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = mixivTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akkeylab.mixivTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mixiv.app/mixiv";
+			};
+			name = Debug;
+		};
+		66DF193B1D7BD26100253B39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = mixivTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akkeylab.mixivTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mixiv.app/mixiv";
+			};
+			name = Release;
+		};
+		66DF193D1D7BD26100253B39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = mixivUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akkeylab.mixivUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = mixiv;
+			};
+			name = Debug;
+		};
+		66DF193E1D7BD26100253B39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = mixivUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akkeylab.mixivUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = mixiv;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66DF19091D7BD26000253B39 /* Build configuration list for PBXProject "mixiv" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66DF19341D7BD26100253B39 /* Debug */,
+				66DF19351D7BD26100253B39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66DF19361D7BD26100253B39 /* Build configuration list for PBXNativeTarget "mixiv" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66DF19371D7BD26100253B39 /* Debug */,
+				66DF19381D7BD26100253B39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		66DF19391D7BD26100253B39 /* Build configuration list for PBXNativeTarget "mixivTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66DF193A1D7BD26100253B39 /* Debug */,
+				66DF193B1D7BD26100253B39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		66DF193C1D7BD26100253B39 /* Build configuration list for PBXNativeTarget "mixivUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66DF193D1D7BD26100253B39 /* Debug */,
+				66DF193E1D7BD26100253B39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66DF19061D7BD26000253B39 /* Project object */;
+}
