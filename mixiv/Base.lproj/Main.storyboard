@@ -10,7 +10,7 @@
         <!--HOME-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="HOME" id="BYZ-38-t0r" customClass="HomeViewController" customModule="mixiv" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="HOME" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="HomeViewController" customModule="mixiv" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,35 +21,34 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ImC-3H-I4X">
                                 <rect key="frame" x="0.0" y="64" width="600" height="337"/>
-                                <color key="backgroundColor" red="0.73399822879999999" green="1" blue="0.96409971220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.078431372550000003" green="0.64705882349999999" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="ImC-3H-I4X" secondAttribute="height" multiplier="16:9" id="nZV-R1-o1t"/>
+                                    <constraint firstAttribute="width" secondItem="ImC-3H-I4X" secondAttribute="height" multiplier="16:9" id="yME-PD-maQ"/>
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3y1-WR-ymj">
-                                <rect key="frame" x="0.0" y="401" width="600" height="8"/>
+                                <rect key="frame" x="0.0" y="401" width="600" height="15"/>
                                 <color key="backgroundColor" red="0.078431372550000003" green="0.64705882349999999" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="8" id="l04-vA-CyL"/>
+                                    <constraint firstAttribute="height" constant="15" id="l04-vA-CyL"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4ui-It-5Yh">
-                                <rect key="frame" x="0.0" y="409" width="600" height="542"/>
+                                <rect key="frame" x="0.0" y="416" width="600" height="535"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3y1-WR-ymj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="3ah-aI-NoT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ImC-3H-I4X" secondAttribute="trailing" constant="-20" id="8oQ-M7-lFr"/>
+                            <constraint firstItem="3y1-WR-ymj" firstAttribute="top" secondItem="ImC-3H-I4X" secondAttribute="bottom" id="8E4-Su-zIf"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4ui-It-5Yh" secondAttribute="bottom" id="D9d-Q4-1MF"/>
                             <constraint firstItem="4ui-It-5Yh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="K9k-yD-n87"/>
-                            <constraint firstItem="ImC-3H-I4X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Qx1-n1-AKP"/>
-                            <constraint firstItem="3y1-WR-ymj" firstAttribute="top" secondItem="ImC-3H-I4X" secondAttribute="bottom" id="ZhU-4G-Oki"/>
-                            <constraint firstItem="ImC-3H-I4X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="l2x-a0-RIP"/>
+                            <constraint firstAttribute="trailing" secondItem="ImC-3H-I4X" secondAttribute="trailing" id="MwF-cg-7ea"/>
+                            <constraint firstItem="ImC-3H-I4X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kTI-D9-KBv"/>
+                            <constraint firstItem="ImC-3H-I4X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="nlS-fs-bzA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4ui-It-5Yh" secondAttribute="trailing" constant="-20" id="nmI-Gx-zfl"/>
                             <constraint firstItem="4ui-It-5Yh" firstAttribute="top" secondItem="3y1-WR-ymj" secondAttribute="bottom" id="obv-Fd-mmR"/>
-                            <constraint firstItem="4ui-It-5Yh" firstAttribute="width" secondItem="ImC-3H-I4X" secondAttribute="width" id="p7N-w4-LN5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3y1-WR-ymj" secondAttribute="trailing" constant="-20" id="x5F-5f-kLS"/>
                         </constraints>
                     </view>
