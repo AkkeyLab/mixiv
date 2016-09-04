@@ -1,0 +1,10 @@
+PODS:
+  - GuttlerPageControl (0.1.1)
+
+DEPENDENCIES:
+  - GuttlerPageControl (~> 0.1.1)
+
+SPEC CHECKSUMS:
+  GuttlerPageControl: 35ad42e426fda71cea447c6ec2e848085f3fcd2c
+
+COCOAPODS: 0.39.0
