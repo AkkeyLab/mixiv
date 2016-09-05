@@ -9,13 +9,28 @@
 import UIKit
 
 class AdvertisementView: UIView {
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var textLabel: UILabel!
+
+    class func instance() -> AdvertisementView {
+
+        return UINib(nibName: "Advertisement", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! AdvertisementView
+    }
+
+    func setImage(image: UIImage) {
+        imageView.image = image
+    }
+
+    func setText(text: String) {
+        textLabel.text = text
+    }
 
     /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
+     // Only override drawRect: if you perform custom drawing.
+     // An empty implementation adversely affects performance during animation.
+     override func drawRect(rect: CGRect) {
+     // Drawing code
+     }
+     */
 
 }
