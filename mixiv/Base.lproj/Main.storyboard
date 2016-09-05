@@ -57,6 +57,7 @@
                     <size key="freeformSize" width="600" height="1000"/>
                     <connections>
                         <outlet property="adScrollView" destination="ImC-3H-I4X" id="Tej-Hv-GXi"/>
+                        <outlet property="adStatusView" destination="3y1-WR-ymj" id="DPT-nW-lj8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

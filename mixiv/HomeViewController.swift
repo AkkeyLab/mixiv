@@ -11,6 +11,7 @@ import GuttlerPageControl
 
 class HomeViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var adScrollView: UIScrollView!
+    @IBOutlet weak var adStatusView: UIView!
     private var scrollHeight: CGFloat!
     private var scrollWidth: CGFloat!
     private let scrollItem: Int = 5
@@ -18,13 +19,16 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     private var pageIndex: Int = 0
     private var goPage: Bool = true
 
+    private let adText: [String] = ["映画館で絶賛放映中!!「君の名は。」公開記念イベント中!",
+        "ちっちゃくてカワイイSDキャラクター特集!",
+        "味のある鉛筆作品が大集合!!",
+        "美しい夜景イラスト特集!",
+        "まだまだ大人気!ラブライブイラストが大集合!!"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollWidth = self.view.frame.size.width
-//        scrollWidth = adScrollView.bounds.size.width
         scrollHeight = scrollWidth * (9 / 16)
-//        scrollHeight = adScrollView.bounds.size.height
-        NSLog("width:\(scrollWidth)/height:\(scrollHeight)")
 
         adScrollView.showsHorizontalScrollIndicator = false
         adScrollView.showsVerticalScrollIndicator = false
@@ -35,16 +39,12 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         adScrollView.delegate = self
         adScrollView.contentSize = CGSizeMake(CGFloat(scrollItem) * scrollWidth, 0)
 
-        let navBarHeight = self.navigationController?.navigationBar.frame.size.height
-        let statusBarHeight: CGFloat = UIApplication.sharedApplication().statusBarFrame.height
-        let exceptionHeight = navBarHeight! + statusBarHeight
-
         var num: Int = 0
         for _ in 1...scrollItem {
-            let view: UIView = UINib(nibName: "Advertisement", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! UIView
-//            let view: UIImageView = UIImageView(image: UIImage(named: "top_ad"))
-            view.frame = CGRectMake(scrollWidth * CGFloat(num), 0, scrollWidth * 1.6, scrollHeight * 1.6)
-//            view.frame = CGRectMake(scrollWidth * CGFloat(num), -exceptionHeight, scrollWidth, scrollHeight)
+            let view = AdvertisementView.instance()
+            view.setImage(UIImage(named: "top_ad_\(num)")!)
+            view.setText(adText[num])
+            view.frame = CGRectMake(scrollWidth * CGFloat(num), 0, adScrollView.bounds.size.width, adScrollView.bounds.size.height)
             view.tag = num
             self.adScrollView.addSubview(view)
 
@@ -52,10 +52,10 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         }
 
         // Just init with position and numOfpage
-        guttlerPageControl = GuttlerPageControl(center: CGPointMake(scrollWidth / 2, adScrollView.frame.size.height - exceptionHeight + 10), pages: scrollItem)
+        guttlerPageControl = GuttlerPageControl(center: CGPointMake(scrollWidth / 2, adStatusView.frame.size.height / 2), pages: scrollItem)
         // Must bind pageControl with the scrollView
         guttlerPageControl.bindScrollView = adScrollView
-        self.view.addSubview(guttlerPageControl)
+        adStatusView.addSubview(guttlerPageControl)
 
         NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: #selector(HomeViewController.update(_:)), userInfo: nil, repeats: true)
     }
