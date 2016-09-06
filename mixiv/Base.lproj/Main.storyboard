@@ -58,6 +58,7 @@
                     <connections>
                         <outlet property="adScrollView" destination="ImC-3H-I4X" id="Tej-Hv-GXi"/>
                         <outlet property="adStatusView" destination="3y1-WR-ymj" id="DPT-nW-lj8"/>
+                        <outlet property="favoriteTableView" destination="4ui-It-5Yh" id="FLS-dl-jOy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

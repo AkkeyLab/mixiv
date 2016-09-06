@@ -9,9 +9,10 @@
 import UIKit
 import GuttlerPageControl
 
-class HomeViewController: UIViewController, UIScrollViewDelegate {
+class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var adScrollView: UIScrollView!
     @IBOutlet weak var adStatusView: UIView!
+    @IBOutlet weak var favoriteTableView: UITableView!
     private var scrollHeight: CGFloat!
     private var scrollWidth: CGFloat!
     private let scrollItem: Int = 5
@@ -27,6 +28,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         scrollWidth = self.view.frame.size.width
         scrollHeight = scrollWidth * (9 / 16)
 
@@ -57,6 +59,15 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         guttlerPageControl.bindScrollView = adScrollView
         adStatusView.addSubview(guttlerPageControl)
 
+        let nib = UINib(nibName: "FavoriteTableCell", bundle: nil)
+        favoriteTableView.registerNib(nib, forCellReuseIdentifier: "FavoriteTableCell")
+        favoriteTableView.delegate = self
+        favoriteTableView.dataSource = self
+        favoriteTableView.estimatedRowHeight = 20
+        favoriteTableView.rowHeight = UITableViewAutomaticDimension
+        favoriteTableView.separatorStyle = .None
+        favoriteTableView.allowsSelection = false
+
         NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: #selector(HomeViewController.update(_:)), userInfo: nil, repeats: true)
     }
 
@@ -80,6 +91,27 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     func scrollViewDidScroll(scrollView: UIScrollView) {
         guttlerPageControl.scrollWithScrollView(scrollView)
         pageIndex = Int(adScrollView.contentOffset.x / adScrollView.frame.size.width)
+    }
+
+    // Section num
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+
+    // Cell num
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+
+    // Select cell
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        let cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath) as! FavoriteTableCellView
+    }
+
+    // Make cell
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = favoriteTableView.dequeueReusableCellWithIdentifier("FavoriteTableCell", forIndexPath: indexPath) as! FavoriteTableCellView
+        return cell
     }
 
     override func didReceiveMemoryWarning() {

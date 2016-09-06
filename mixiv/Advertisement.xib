@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="800" height="450"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top_ad_0" translatesAutoresizingMaskIntoConstraints="NO" id="xNd-V4-4u0">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top_ad_0" translatesAutoresizingMaskIntoConstraints="NO" id="xNd-V4-4u0">
                     <rect key="frame" x="0.0" y="0.0" width="800" height="450"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="映画館で絶賛放映中!!「君の名は。」公開記念イベント中!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntI-2c-5q0">
