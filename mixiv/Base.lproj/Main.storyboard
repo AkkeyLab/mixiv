@@ -68,7 +68,7 @@
         <!--Camera-->
         <scene sceneID="tWr-6A-sed">
             <objects>
-                <viewController title="Camera" id="kUu-j0-mYV" sceneMemberID="viewController">
+                <viewController title="Camera" id="kUu-j0-mYV" customClass="CameraViewController" customModule="mixiv" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="02W-CZ-zxt"/>
                         <viewControllerLayoutGuide type="bottom" id="ShJ-mI-3yQ"/>
@@ -87,7 +87,7 @@
         <!--ILLUST-->
         <scene sceneID="T9i-Xc-dO8">
             <objects>
-                <viewController title="ILLUST" id="zDe-YT-8bp" sceneMemberID="viewController">
+                <viewController title="ILLUST" automaticallyAdjustsScrollViewInsets="NO" id="zDe-YT-8bp" customClass="IllustViewController" customModule="mixiv" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HK6-Dv-Kx6"/>
                         <viewControllerLayoutGuide type="bottom" id="c9X-Zc-0ML"/>
@@ -95,7 +95,19 @@
                     <view key="view" contentMode="scaleToFill" id="trw-vS-hBT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hem-BV-4et">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c9X-Zc-0ML" firstAttribute="top" secondItem="Hem-BV-4et" secondAttribute="bottom" id="LkL-R9-JWs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hem-BV-4et" secondAttribute="trailing" constant="-20" id="otK-DT-y20"/>
+                            <constraint firstItem="Hem-BV-4et" firstAttribute="leading" secondItem="trw-vS-hBT" secondAttribute="leadingMargin" constant="-20" id="qJY-Ic-3Cb"/>
+                            <constraint firstItem="Hem-BV-4et" firstAttribute="top" secondItem="HK6-Dv-Kx6" secondAttribute="bottom" id="sea-7E-4Hn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ksE-AP-5W6"/>
                 </viewController>
@@ -106,7 +118,7 @@
         <!--STORY-->
         <scene sceneID="9WL-fv-HP8">
             <objects>
-                <viewController title="STORY" id="QOR-xT-q2I" sceneMemberID="viewController">
+                <viewController title="STORY" automaticallyAdjustsScrollViewInsets="NO" id="QOR-xT-q2I" customClass="StoryViewController" customModule="mixiv" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XTj-gc-kPV"/>
                         <viewControllerLayoutGuide type="bottom" id="gKJ-Hf-HlW"/>
@@ -114,7 +126,19 @@
                     <view key="view" contentMode="scaleToFill" id="ne6-lm-4TV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wRI-eR-uhB">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wRI-eR-uhB" firstAttribute="leading" secondItem="ne6-lm-4TV" secondAttribute="leadingMargin" constant="-20" id="4dy-yg-Mp8"/>
+                            <constraint firstItem="gKJ-Hf-HlW" firstAttribute="top" secondItem="wRI-eR-uhB" secondAttribute="bottom" id="dDe-Eq-AvJ"/>
+                            <constraint firstItem="wRI-eR-uhB" firstAttribute="top" secondItem="XTj-gc-kPV" secondAttribute="bottom" id="lYR-SY-kjb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wRI-eR-uhB" secondAttribute="trailing" constant="-20" id="za3-7r-YfO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="inY-1h-8ad"/>
                 </viewController>
@@ -125,7 +149,7 @@
         <!--STORE-->
         <scene sceneID="c4a-Ej-pbx">
             <objects>
-                <viewController title="STORE" id="QVH-Zf-LeG" sceneMemberID="viewController">
+                <viewController title="STORE" automaticallyAdjustsScrollViewInsets="NO" id="QVH-Zf-LeG" customClass="StoreViewController" customModule="mixiv" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zPg-Er-46D"/>
                         <viewControllerLayoutGuide type="bottom" id="XJN-Ns-aKW"/>
@@ -133,7 +157,19 @@
                     <view key="view" contentMode="scaleToFill" id="5Kf-zt-cWL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J1Q-5v-nM3">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J1Q-5v-nM3" firstAttribute="top" secondItem="zPg-Er-46D" secondAttribute="bottom" id="APW-8b-ilK"/>
+                            <constraint firstItem="J1Q-5v-nM3" firstAttribute="leading" secondItem="5Kf-zt-cWL" secondAttribute="leadingMargin" constant="-20" id="kN4-fL-I6z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J1Q-5v-nM3" secondAttribute="trailing" constant="-20" id="tyC-Ct-lkd"/>
+                            <constraint firstItem="XJN-Ns-aKW" firstAttribute="top" secondItem="J1Q-5v-nM3" secondAttribute="bottom" id="xG7-gt-zgd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4Jl-hs-yct"/>
                 </viewController>
