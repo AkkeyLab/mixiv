@@ -19,6 +19,10 @@
 		66DF19441D7C1DF700253B39 /* AdvertisementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF19431D7C1DF700253B39 /* AdvertisementView.swift */; };
 		66DF198E1D7F1D0000253B39 /* FavoriteTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66DF198D1D7F1D0000253B39 /* FavoriteTableCell.xib */; };
 		66DF19901D7F228700253B39 /* FavoriteTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF198F1D7F228700253B39 /* FavoriteTableCellView.swift */; };
+		66DF19CF1D80750200253B39 /* IllustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF19CE1D80750200253B39 /* IllustViewController.swift */; };
+		66DF19D11D80751D00253B39 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF19D01D80751D00253B39 /* StoryViewController.swift */; };
+		66DF19D31D80752E00253B39 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF19D21D80752E00253B39 /* StoreViewController.swift */; };
+		66DF19D51D80754500253B39 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF19D41D80754500253B39 /* CameraViewController.swift */; };
 		A382B95B3EEFCB802B999501 /* Pods_mixiv.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2E95B2F1444539B0B81D52 /* Pods_mixiv.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +64,10 @@
 		66DF19431D7C1DF700253B39 /* AdvertisementView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertisementView.swift; sourceTree = "<group>"; };
 		66DF198D1D7F1D0000253B39 /* FavoriteTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteTableCell.xib; sourceTree = "<group>"; };
 		66DF198F1D7F228700253B39 /* FavoriteTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableCellView.swift; sourceTree = "<group>"; };
+		66DF19CE1D80750200253B39 /* IllustViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IllustViewController.swift; sourceTree = "<group>"; };
+		66DF19D01D80751D00253B39 /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
+		66DF19D21D80752E00253B39 /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		66DF19D41D80754500253B39 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		B757095B69146EF47495A8A0 /* Pods-mixiv.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mixiv.release.xcconfig"; path = "Pods/Target Support Files/Pods-mixiv/Pods-mixiv.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +141,10 @@
 				66DF19431D7C1DF700253B39 /* AdvertisementView.swift */,
 				66DF198D1D7F1D0000253B39 /* FavoriteTableCell.xib */,
 				66DF198F1D7F228700253B39 /* FavoriteTableCellView.swift */,
+				66DF19CE1D80750200253B39 /* IllustViewController.swift */,
+				66DF19D01D80751D00253B39 /* StoryViewController.swift */,
+				66DF19D21D80752E00253B39 /* StoreViewController.swift */,
+				66DF19D41D80754500253B39 /* CameraViewController.swift */,
 			);
 			path = mixiv;
 			sourceTree = "<group>";
@@ -348,11 +360,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66DF19D31D80752E00253B39 /* StoreViewController.swift in Sources */,
 				66DF19441D7C1DF700253B39 /* AdvertisementView.swift in Sources */,
 				66DF19141D7BD26000253B39 /* ViewController.swift in Sources */,
 				66DF19901D7F228700253B39 /* FavoriteTableCellView.swift in Sources */,
 				66DF19121D7BD26000253B39 /* AppDelegate.swift in Sources */,
 				66DF19401D7C17B700253B39 /* HomeViewController.swift in Sources */,
+				66DF19D11D80751D00253B39 /* StoryViewController.swift in Sources */,
+				66DF19CF1D80750200253B39 /* IllustViewController.swift in Sources */,
+				66DF19D51D80754500253B39 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
