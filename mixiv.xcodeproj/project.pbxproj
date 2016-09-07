@@ -23,6 +23,8 @@
 		66DF19D11D80751D00253B39 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF19D01D80751D00253B39 /* StoryViewController.swift */; };
 		66DF19D31D80752E00253B39 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF19D21D80752E00253B39 /* StoreViewController.swift */; };
 		66DF19D51D80754500253B39 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF19D41D80754500253B39 /* CameraViewController.swift */; };
+		66DF19D81D80762400253B39 /* IllustTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF19D61D80762400253B39 /* IllustTableCellView.swift */; };
+		66DF19D91D80762400253B39 /* IllustTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66DF19D71D80762400253B39 /* IllustTableCell.xib */; };
 		A382B95B3EEFCB802B999501 /* Pods_mixiv.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2E95B2F1444539B0B81D52 /* Pods_mixiv.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +70,8 @@
 		66DF19D01D80751D00253B39 /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		66DF19D21D80752E00253B39 /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		66DF19D41D80754500253B39 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		66DF19D61D80762400253B39 /* IllustTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IllustTableCellView.swift; sourceTree = "<group>"; };
+		66DF19D71D80762400253B39 /* IllustTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IllustTableCell.xib; sourceTree = "<group>"; };
 		B757095B69146EF47495A8A0 /* Pods-mixiv.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mixiv.release.xcconfig"; path = "Pods/Target Support Files/Pods-mixiv/Pods-mixiv.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +149,8 @@
 				66DF19D01D80751D00253B39 /* StoryViewController.swift */,
 				66DF19D21D80752E00253B39 /* StoreViewController.swift */,
 				66DF19D41D80754500253B39 /* CameraViewController.swift */,
+				66DF19D71D80762400253B39 /* IllustTableCell.xib */,
+				66DF19D61D80762400253B39 /* IllustTableCellView.swift */,
 			);
 			path = mixiv;
 			sourceTree = "<group>";
@@ -286,6 +292,7 @@
 				66DF191C1D7BD26000253B39 /* LaunchScreen.storyboard in Resources */,
 				66DF19421D7C1C3C00253B39 /* Advertisement.xib in Resources */,
 				66DF19191D7BD26000253B39 /* Assets.xcassets in Resources */,
+				66DF19D91D80762400253B39 /* IllustTableCell.xib in Resources */,
 				66DF198E1D7F1D0000253B39 /* FavoriteTableCell.xib in Resources */,
 				66DF19171D7BD26000253B39 /* Main.storyboard in Resources */,
 			);
@@ -360,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66DF19D81D80762400253B39 /* IllustTableCellView.swift in Sources */,
 				66DF19D31D80752E00253B39 /* StoreViewController.swift in Sources */,
 				66DF19441D7C1DF700253B39 /* AdvertisementView.swift in Sources */,
 				66DF19141D7BD26000253B39 /* ViewController.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FavoriteTableCellView: UITableViewCell {
+class IllustTableCellView: UITableViewCell {
     @IBOutlet weak var illustViewLeft: UIImageView!
     @IBOutlet weak var userIconViewLeft: UIImageView!
     @IBOutlet weak var illustViewRight: UIImageView!
