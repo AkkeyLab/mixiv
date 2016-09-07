@@ -110,6 +110,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ksE-AP-5W6"/>
+                    <connections>
+                        <outlet property="illustTableView" destination="Hem-BV-4et" id="dKn-7c-bLZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6C-KE-qBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,6 +144,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="inY-1h-8ad"/>
+                    <connections>
+                        <outlet property="storyTableView" destination="wRI-eR-uhB" id="G4G-yj-RJS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yeq-er-c4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -172,6 +178,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4Jl-hs-yct"/>
+                    <connections>
+                        <outlet property="storeTableView" destination="J1Q-5v-nM3" id="559-XN-QUA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ROb-3j-aaG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

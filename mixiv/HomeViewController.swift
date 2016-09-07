@@ -114,6 +114,12 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
     // Make cell
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = favoriteTableView.dequeueReusableCellWithIdentifier("FavoriteTableCell", forIndexPath: indexPath) as! FavoriteTableCellView
+        cell.userIconViewRight.layer.cornerRadius = scrollWidth / 12
+        cell.userIconViewRight.layer.borderColor = UIColor.whiteColor().CGColor
+        cell.userIconViewRight.layer.borderWidth = 5
+        cell.userIconViewLeft.layer.cornerRadius = scrollWidth / 12
+        cell.userIconViewLeft.layer.borderColor = UIColor.whiteColor().CGColor
+        cell.userIconViewLeft.layer.borderWidth = 5
         return cell
     }
 

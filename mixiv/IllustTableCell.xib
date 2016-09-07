@@ -7,9 +7,9 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoriteTableCellView" customModule="mixiv" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IllustTableCellView" customModule="mixiv" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" restorationIdentifier="FavoriteTableCell" id="iN0-l3-epB" customClass="FavoriteTableCellView" customModule="mixiv" customModuleProvider="target">
+        <view contentMode="scaleToFill" restorationIdentifier="IllustTableCell" id="iN0-l3-epB" customClass="IllustTableCellView" customModule="mixiv" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -91,10 +91,10 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="illustViewLeft" destination="qja-C9-UaN" id="WBk-IT-3RU"/>
-                <outlet property="illustViewRight" destination="Dcu-Hu-J2b" id="mit-Pv-XnU"/>
-                <outlet property="userIconViewLeft" destination="zrB-T7-h2I" id="htK-7F-SXY"/>
-                <outlet property="userIconViewRight" destination="fTb-X7-F0O" id="gNF-mb-Ord"/>
+                <outlet property="illustViewLeft" destination="qja-C9-UaN" id="EID-e6-DhM"/>
+                <outlet property="illustViewRight" destination="Dcu-Hu-J2b" id="0i3-Ap-rkf"/>
+                <outlet property="userIconViewLeft" destination="zrB-T7-h2I" id="631-tw-RcP"/>
+                <outlet property="userIconViewRight" destination="fTb-X7-F0O" id="yIv-0i-mJP"/>
             </connections>
             <point key="canvasLocation" x="466" y="304"/>
         </view>
