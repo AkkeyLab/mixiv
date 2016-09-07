@@ -40,6 +40,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
         adScrollView.scrollsToTop = false
         adScrollView.delegate = self
         adScrollView.contentSize = CGSizeMake(CGFloat(scrollItem) * scrollWidth, 0)
+        adScrollView.tag = 1
 
         var num: Int = 0
         for _ in 1...scrollItem {
@@ -89,8 +90,10 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
     }
 
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        guttlerPageControl.scrollWithScrollView(scrollView)
-        pageIndex = Int(adScrollView.contentOffset.x / adScrollView.frame.size.width)
+        if scrollView.tag == 1 {
+            guttlerPageControl.scrollWithScrollView(scrollView)
+            pageIndex = Int(adScrollView.contentOffset.x / adScrollView.frame.size.width)
+        }
     }
 
     // Section num
