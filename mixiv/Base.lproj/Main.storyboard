@@ -28,7 +28,7 @@
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3y1-WR-ymj">
                                 <rect key="frame" x="0.0" y="401" width="600" height="15"/>
-                                <color key="backgroundColor" red="0.078431372550000003" green="0.64705882349999999" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.53725490200000003" green="0.7843137255" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="l04-vA-CyL"/>
                                 </constraints>
@@ -53,7 +53,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="ホーム" image="home" id="p3t-Zn-D1u" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
-                    <navigationItem key="navigationItem" id="Iq1-EO-LvR"/>
+                    <navigationItem key="navigationItem" title="ホーム" id="eZo-OQ-a2R"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1000"/>
                     <connections>
@@ -80,7 +80,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="カメラ" image="camera" id="uYo-0X-2Xu" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
-                    <navigationItem key="navigationItem" id="uIs-4a-at3"/>
+                    <navigationItem key="navigationItem" title="カメラ" id="bWJ-QN-0Q4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40I-Zh-awt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,7 +112,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="イラスト" image="illust" id="pd5-3A-EHs" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
-                    <navigationItem key="navigationItem" id="ksE-AP-5W6"/>
+                    <navigationItem key="navigationItem" title="イラスト" id="QAI-QI-pnf"/>
                     <connections>
                         <outlet property="illustTableView" destination="Hem-BV-4et" id="dKn-7c-bLZ"/>
                     </connections>
@@ -147,7 +147,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="シナリオ" image="story" id="I3M-GO-Ufh" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
-                    <navigationItem key="navigationItem" id="inY-1h-8ad"/>
+                    <navigationItem key="navigationItem" title="シナリオ" id="NCN-SU-RAk"/>
                     <connections>
                         <outlet property="storyTableView" destination="wRI-eR-uhB" id="G4G-yj-RJS"/>
                     </connections>
@@ -182,7 +182,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="ストア" image="store" id="QMv-Gj-r0p" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
-                    <navigationItem key="navigationItem" id="4Jl-hs-yct"/>
+                    <navigationItem key="navigationItem" title="ストア" id="0jG-yH-vcv"/>
                     <connections>
                         <outlet property="storeTableView" destination="J1Q-5v-nM3" id="559-XN-QUA"/>
                     </connections>
@@ -199,6 +199,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="s2B-au-xgo">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.53725490200000003" green="0.7843137255" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="z6h-yo-jMn" kind="relationship" relationship="viewControllers" id="Qha-ZP-LkB"/>
@@ -217,6 +218,14 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z6h-yo-jMn" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="ホーム" image="home" id="DZh-MM-5V6" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="animation" destination="sgd-cI-AVb" id="ukT-Ol-Okq"/>
                         </connections>
@@ -225,6 +234,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OkN-RU-fD5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.53725490196078429" green="0.78431372549019607" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -241,6 +254,14 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tbf-Go-Ymj" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="イラスト" image="illust" id="5lA-W8-bfb" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="animation" destination="feL-gH-V4y" id="BWS-6M-yG0"/>
                         </connections>
@@ -249,6 +270,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="w1b-gQ-P6j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.53725490200000003" green="0.7843137255" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -265,6 +290,14 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="THx-0J-rQ7" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="シナリオ" image="story" id="c3G-sG-G6a" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="animation" destination="QGh-Oz-RQ2" id="PRR-gq-uYo"/>
                         </connections>
@@ -273,6 +306,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oSc-pm-5j5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.53725490200000003" green="0.7843137255" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -289,6 +326,14 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uNa-nK-7d5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="カメラ" image="camera" id="rdn-CF-p2p" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="animation" destination="t0x-ON-75C" id="TCd-EK-yVd"/>
                         </connections>
@@ -297,6 +342,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="B2m-eh-G7A">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.53725490200000003" green="0.7843137255" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -313,6 +362,14 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="brb-uj-luQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="ストア" image="store" id="yVK-V7-PD7" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="animation" destination="Rnx-1c-NLo" id="yWb-gh-ro1"/>
                         </connections>
@@ -321,6 +378,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="A4L-be-ro2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.53725490200000003" green="0.7843137255" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
