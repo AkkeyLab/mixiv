@@ -52,6 +52,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="3y1-WR-ymj" secondAttribute="trailing" constant="-20" id="x5F-5f-kLS"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="ホーム" image="home" id="p3t-Zn-D1u" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
                     <navigationItem key="navigationItem" id="Iq1-EO-LvR"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1000"/>
@@ -78,6 +79,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="カメラ" image="camera" id="uYo-0X-2Xu" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
                     <navigationItem key="navigationItem" id="uIs-4a-at3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40I-Zh-awt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -109,6 +111,7 @@
                             <constraint firstItem="Hem-BV-4et" firstAttribute="top" secondItem="HK6-Dv-Kx6" secondAttribute="bottom" id="sea-7E-4Hn"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="イラスト" image="illust" id="pd5-3A-EHs" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
                     <navigationItem key="navigationItem" id="ksE-AP-5W6"/>
                     <connections>
                         <outlet property="illustTableView" destination="Hem-BV-4et" id="dKn-7c-bLZ"/>
@@ -143,6 +146,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="wRI-eR-uhB" secondAttribute="trailing" constant="-20" id="za3-7r-YfO"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="シナリオ" image="story" id="I3M-GO-Ufh" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
                     <navigationItem key="navigationItem" id="inY-1h-8ad"/>
                     <connections>
                         <outlet property="storyTableView" destination="wRI-eR-uhB" id="G4G-yj-RJS"/>
@@ -177,6 +181,7 @@
                             <constraint firstItem="XJN-Ns-aKW" firstAttribute="top" secondItem="J1Q-5v-nM3" secondAttribute="bottom" id="xG7-gt-zgd"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="ストア" image="store" id="QMv-Gj-r0p" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
                     <navigationItem key="navigationItem" id="4Jl-hs-yct"/>
                     <connections>
                         <outlet property="storeTableView" destination="J1Q-5v-nM3" id="559-XN-QUA"/>
@@ -186,10 +191,10 @@
             </objects>
             <point key="canvasLocation" x="2090" y="3142"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Animated Tab Bar Controller-->
         <scene sceneID="YkA-aU-lL0">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="AuN-Ma-lPy" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="AuN-Ma-lPy" customClass="RAMAnimatedTabBarController" customModule="RAMAnimatedTabBarController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="s2B-au-xgo">
                         <autoresizingMask key="autoresizingMask"/>
@@ -207,11 +212,15 @@
             </objects>
             <point key="canvasLocation" x="466" y="442"/>
         </scene>
-        <!--Item-->
+        <!--ホーム-->
         <scene sceneID="Smb-a9-msL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z6h-yo-jMn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="DZh-MM-5V6"/>
+                    <tabBarItem key="tabBarItem" title="ホーム" image="home" id="DZh-MM-5V6" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="sgd-cI-AVb" id="ukT-Ol-Okq"/>
+                        </connections>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OkN-RU-fD5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -223,14 +232,19 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ou9-C5-vbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="sgd-cI-AVb" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="1278" y="442"/>
         </scene>
-        <!--Item-->
+        <!--イラスト-->
         <scene sceneID="Ywn-QY-TNH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tbf-Go-Ymj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="5lA-W8-bfb"/>
+                    <tabBarItem key="tabBarItem" title="イラスト" image="illust" id="5lA-W8-bfb" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="feL-gH-V4y" id="BWS-6M-yG0"/>
+                        </connections>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="w1b-gQ-P6j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -242,14 +256,19 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HAr-cE-eeK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="feL-gH-V4y" customClass="RAMLeftRotationAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="1278" y="1114"/>
         </scene>
-        <!--Item-->
+        <!--シナリオ-->
         <scene sceneID="sa8-QG-cqH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="THx-0J-rQ7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="c3G-sG-G6a"/>
+                    <tabBarItem key="tabBarItem" title="シナリオ" image="story" id="c3G-sG-G6a" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="QGh-Oz-RQ2" id="PRR-gq-uYo"/>
+                        </connections>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oSc-pm-5j5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -261,14 +280,19 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u0B-9d-FPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="QGh-Oz-RQ2" customClass="RAMFlipRightTransitionItemAnimations" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="1278" y="1788"/>
         </scene>
-        <!--Item-->
+        <!--カメラ-->
         <scene sceneID="tCg-Fd-dHo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uNa-nK-7d5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="rdn-CF-p2p"/>
+                    <tabBarItem key="tabBarItem" title="カメラ" image="camera" id="rdn-CF-p2p" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="t0x-ON-75C" id="TCd-EK-yVd"/>
+                        </connections>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="B2m-eh-G7A">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -280,14 +304,19 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d1G-ZH-my8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="t0x-ON-75C" customClass="RAMFumeAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="1278" y="2462"/>
         </scene>
-        <!--Item-->
+        <!--ストア-->
         <scene sceneID="QG8-AI-8ji">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="brb-uj-luQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="yVK-V7-PD7"/>
+                    <tabBarItem key="tabBarItem" title="ストア" image="store" id="yVK-V7-PD7" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="Rnx-1c-NLo" id="yWb-gh-ro1"/>
+                        </connections>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="A4L-be-ro2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -299,8 +328,16 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YxI-7Y-ybb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Rnx-1c-NLo" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="1278" y="3142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" width="30" height="30"/>
+        <image name="home" width="30" height="30"/>
+        <image name="illust" width="30" height="30"/>
+        <image name="store" width="30" height="30"/>
+        <image name="story" width="30" height="30"/>
+    </resources>
 </document>

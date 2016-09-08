@@ -1,10 +1,25 @@
 PODS:
   - GuttlerPageControl (0.1.1)
+  - PDFramework (1.0.0)
+  - RAMAnimatedTabBarController (1.5.3)
 
 DEPENDENCIES:
   - GuttlerPageControl (~> 0.1.1)
+  - PDFramework (from `https://gitlab.planningdev.com/planningdev/iOS_PDFramework.git`)
+  - RAMAnimatedTabBarController
+
+EXTERNAL SOURCES:
+  PDFramework:
+    :git: https://gitlab.planningdev.com/planningdev/iOS_PDFramework.git
+
+CHECKOUT OPTIONS:
+  PDFramework:
+    :commit: 9be1eb3f653424b3d76c7ced6083c41f29a1984b
+    :git: https://gitlab.planningdev.com/planningdev/iOS_PDFramework.git
 
 SPEC CHECKSUMS:
   GuttlerPageControl: 35ad42e426fda71cea447c6ec2e848085f3fcd2c
+  PDFramework: 091eaa2f4273686b4cd2b1185c4cd923037e4399
+  RAMAnimatedTabBarController: 04b624cf8958a0032bf7fa9c0f2c515f59d30b9c
 
 COCOAPODS: 0.39.0
