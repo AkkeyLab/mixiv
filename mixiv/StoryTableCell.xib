@@ -19,11 +19,11 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lA1-Uw-nmr">
                             <rect key="frame" x="300" y="0.0" width="300" height="300"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top_ad_4" translatesAutoresizingMaskIntoConstraints="NO" id="Dcu-Hu-J2b">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top_ad_4" translatesAutoresizingMaskIntoConstraints="NO" id="Dcu-Hu-J2b">
                                     <rect key="frame" x="2" y="2" width="296" height="296"/>
                                 </imageView>
-                                <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="top_ad_1" translatesAutoresizingMaskIntoConstraints="NO" id="fTb-X7-F0O">
-                                    <rect key="frame" x="2" y="200" width="99" height="98"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_icon" translatesAutoresizingMaskIntoConstraints="NO" id="fTb-X7-F0O">
+                                    <rect key="frame" x="2" y="199.5" width="98.5" height="98.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="fTb-X7-F0O" secondAttribute="height" multiplier="1:1" id="nV0-Uu-V8k"/>
                                     </constraints>
@@ -44,11 +44,11 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Geg-mn-ltv">
                             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top_ad_3" translatesAutoresizingMaskIntoConstraints="NO" id="qja-C9-UaN">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top_ad_3" translatesAutoresizingMaskIntoConstraints="NO" id="qja-C9-UaN">
                                     <rect key="frame" x="2" y="2" width="296" height="296"/>
                                 </imageView>
-                                <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="top_ad_2" translatesAutoresizingMaskIntoConstraints="NO" id="zrB-T7-h2I">
-                                    <rect key="frame" x="2" y="200" width="99" height="98"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_icon" translatesAutoresizingMaskIntoConstraints="NO" id="zrB-T7-h2I">
+                                    <rect key="frame" x="2" y="199.5" width="98.5" height="98.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="zrB-T7-h2I" secondAttribute="height" multiplier="1:1" id="czt-w2-dVp"/>
                                     </constraints>
@@ -90,19 +90,12 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="illustViewLeft" destination="qja-C9-UaN" id="WBk-IT-3RU"/>
-                <outlet property="illustViewRight" destination="Dcu-Hu-J2b" id="mit-Pv-XnU"/>
-                <outlet property="userIconViewLeft" destination="zrB-T7-h2I" id="htK-7F-SXY"/>
-                <outlet property="userIconViewRight" destination="fTb-X7-F0O" id="gNF-mb-Ord"/>
-            </connections>
             <point key="canvasLocation" x="466" y="304"/>
         </view>
     </objects>
     <resources>
-        <image name="top_ad_1" width="1000" height="708"/>
-        <image name="top_ad_2" width="1000" height="747"/>
         <image name="top_ad_3" width="1000" height="707"/>
         <image name="top_ad_4" width="1000" height="673"/>
+        <image name="user_icon" width="512" height="512"/>
     </resources>
 </document>

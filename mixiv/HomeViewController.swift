@@ -67,7 +67,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
         favoriteTableView.estimatedRowHeight = 20
         favoriteTableView.rowHeight = UITableViewAutomaticDimension
         favoriteTableView.separatorStyle = .None
-        favoriteTableView.allowsSelection = false
+//        favoriteTableView.allowsSelection = false
 
         NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: #selector(HomeViewController.update(_:)), userInfo: nil, repeats: true)
     }
@@ -114,13 +114,29 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
     // Make cell
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = favoriteTableView.dequeueReusableCellWithIdentifier("FavoriteTableCell", forIndexPath: indexPath) as! FavoriteTableCellView
+        cell.selectionStyle = .None
         cell.userIconViewRight.layer.cornerRadius = scrollWidth / 12
         cell.userIconViewRight.layer.borderColor = UIColor.whiteColor().CGColor
         cell.userIconViewRight.layer.borderWidth = 5
         cell.userIconViewLeft.layer.cornerRadius = scrollWidth / 12
         cell.userIconViewLeft.layer.borderColor = UIColor.whiteColor().CGColor
         cell.userIconViewLeft.layer.borderWidth = 5
+
         return cell
+    }
+
+    // Get cell action
+    func touchAction(sender: AnyObject?) {
+        guard let gestures = sender?.gestureRecognizers! else { return }
+        debugPrint("ooo:\(sender?.tag)")
+        for gesture in gestures {
+            if let gesture = gesture as? UITapGestureRecognizer {
+                let tappedLocation = gesture.locationInView(favoriteTableView)
+                let tappedIndexPath = favoriteTableView.indexPathForRowAtPoint(tappedLocation)
+                let tappedRow = tappedIndexPath?.row
+                debugPrint(tappedRow)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
