@@ -44,10 +44,10 @@ class IllustViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = illustTableView.dequeueReusableCellWithIdentifier("IllustTableCell", forIndexPath: indexPath) as! IllustTableCellView
         cell.userIconViewRight.layer.cornerRadius = self.view.frame.size.width / 12
         cell.userIconViewRight.layer.borderColor = UIColor.whiteColor().CGColor
-        cell.userIconViewRight.layer.borderWidth = 5
+        cell.userIconViewRight.layer.borderWidth = 2
         cell.userIconViewLeft.layer.cornerRadius = self.view.frame.size.width / 12
         cell.userIconViewLeft.layer.borderColor = UIColor.whiteColor().CGColor
-        cell.userIconViewLeft.layer.borderWidth = 5
+        cell.userIconViewLeft.layer.borderWidth = 2
         return cell
     }
 

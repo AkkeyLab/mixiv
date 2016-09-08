@@ -32,6 +32,11 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
         scrollWidth = self.view.frame.size.width
         scrollHeight = scrollWidth * (9 / 16)
 
+        settingADScrollView()
+        settingFavoriteTableView()
+    }
+
+    func settingADScrollView() {
         adScrollView.showsHorizontalScrollIndicator = false
         adScrollView.showsVerticalScrollIndicator = false
         adScrollView.pagingEnabled = true
@@ -60,6 +65,10 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
         guttlerPageControl.bindScrollView = adScrollView
         adStatusView.addSubview(guttlerPageControl)
 
+        NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: #selector(HomeViewController.update(_:)), userInfo: nil, repeats: true)
+    }
+
+    func settingFavoriteTableView() {
         let nib = UINib(nibName: "FavoriteTableCell", bundle: nil)
         favoriteTableView.registerNib(nib, forCellReuseIdentifier: "FavoriteTableCell")
         favoriteTableView.delegate = self
@@ -67,9 +76,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
         favoriteTableView.estimatedRowHeight = 20
         favoriteTableView.rowHeight = UITableViewAutomaticDimension
         favoriteTableView.separatorStyle = .None
-//        favoriteTableView.allowsSelection = false
-
-        NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: #selector(HomeViewController.update(_:)), userInfo: nil, repeats: true)
     }
 
     func update(timer: NSTimer) {
@@ -117,10 +123,10 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
         cell.selectionStyle = .None
         cell.userIconViewRight.layer.cornerRadius = scrollWidth / 12
         cell.userIconViewRight.layer.borderColor = UIColor.whiteColor().CGColor
-        cell.userIconViewRight.layer.borderWidth = 5
+        cell.userIconViewRight.layer.borderWidth = 2
         cell.userIconViewLeft.layer.cornerRadius = scrollWidth / 12
         cell.userIconViewLeft.layer.borderColor = UIColor.whiteColor().CGColor
-        cell.userIconViewLeft.layer.borderWidth = 5
+        cell.userIconViewLeft.layer.borderWidth = 2
 
         return cell
     }
