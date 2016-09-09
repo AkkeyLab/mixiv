@@ -8,6 +8,9 @@ target 'mixiv' do
   pod 'PDFramework', :git => 'https://gitlab.planningdev.com/planningdev/iOS_PDFramework.git'
   pod 'RAMAnimatedTabBarController'
   pod 'Material', '~> 1.42'
+  pod 'EPSignature'
+# pod 'PullToMakeFlight'
+  pod 'ASAutoResizingTextView'
 end
 
 target 'mixivTests' do

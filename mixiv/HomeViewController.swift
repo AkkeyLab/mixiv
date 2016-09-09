@@ -19,6 +19,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
     private var guttlerPageControl: GuttlerPageControl!
     private var pageIndex: Int = 0
     private var goPage: Bool = true
+    private var refreshControl: UIRefreshControl!
 
     private let adText: [String] = ["映画館で絶賛放映中!!「君の名は。」公開記念イベント中!",
         "ちっちゃくてカワイイSDキャラクター特集!",
@@ -34,6 +35,19 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
 
         settingADScrollView()
         settingFavoriteTableView()
+        reloadAnimationSetting()
+    }
+
+    func reloadAnimationSetting() {
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.attributedTitle = NSAttributedString(string: "引っ張って更新")
+        self.refreshControl.addTarget(self, action: #selector(HomeViewController.refresh), forControlEvents: UIControlEvents.ValueChanged)
+        self.favoriteTableView.addSubview(refreshControl)
+    }
+
+    func refresh() {
+        // ココに更新処理
+        refreshControl.endRefreshing() // 更新終了
     }
 
     func settingADScrollView() {

@@ -12,6 +12,7 @@ import Material
 class StoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var storyTableView: UITableView!
     @IBOutlet weak var menuView: MenuView!
+    private var refreshControl: UIRefreshControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,19 @@ class StoryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         storyTableView.allowsSelection = false
 
         prepareMenuView()
+        reloadAnimationSetting()
+    }
+
+    func reloadAnimationSetting() {
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.attributedTitle = NSAttributedString(string: "引っ張って更新")
+        self.refreshControl.addTarget(self, action: #selector(StoryViewController.refresh), forControlEvents: UIControlEvents.ValueChanged)
+        self.storyTableView.addSubview(refreshControl)
+    }
+
+    func refresh() {
+        // ココに更新処理
+        refreshControl.endRefreshing() // 更新終了
     }
 
     // Section num

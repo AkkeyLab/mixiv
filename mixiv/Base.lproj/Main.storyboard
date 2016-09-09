@@ -21,7 +21,7 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ImC-3H-I4X">
                                 <rect key="frame" x="0.0" y="64" width="600" height="337"/>
-                                <color key="backgroundColor" red="0.078431372550000003" green="0.64705882349999999" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.53725490200000003" green="0.7843137255" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ImC-3H-I4X" secondAttribute="height" multiplier="16:9" id="yME-PD-maQ"/>
                                 </constraints>
