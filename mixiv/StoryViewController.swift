@@ -8,13 +8,47 @@
 
 import UIKit
 
-class StoryViewController: UIViewController {
+class StoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var storyTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let nib = UINib(nibName: "StoryTableCell", bundle: nil)
+        storyTableView.registerNib(nib, forCellReuseIdentifier: "StoryTableCell")
+        storyTableView.delegate = self
+        storyTableView.dataSource = self
+        storyTableView.estimatedRowHeight = 20
+        storyTableView.rowHeight = UITableViewAutomaticDimension
+        storyTableView.separatorStyle = .None
+        storyTableView.allowsSelection = false
+    }
+
+    // Section num
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+
+    // Cell num
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+
+    // Select cell
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // let cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath) as! FavoriteTableCellView
+    }
+
+    // Make cell
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = storyTableView.dequeueReusableCellWithIdentifier("StoryTableCell", forIndexPath: indexPath) as! StoryTableCellView
+        cell.userIconViewRight.layer.cornerRadius = self.view.frame.size.width / 12
+        cell.userIconViewRight.layer.borderColor = UIColor.whiteColor().CGColor
+        cell.userIconViewRight.layer.borderWidth = 2
+        cell.userIconViewLeft.layer.cornerRadius = self.view.frame.size.width / 12
+        cell.userIconViewLeft.layer.borderColor = UIColor.whiteColor().CGColor
+        cell.userIconViewLeft.layer.borderWidth = 2
+        return cell
     }
 
     override func didReceiveMemoryWarning() {
