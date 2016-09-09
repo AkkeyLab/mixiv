@@ -8,10 +8,12 @@
 
 import UIKit
 import Material
+import EPSignature
 
-class IllustViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class IllustViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, EPSignatureDelegate {
     @IBOutlet weak var illustTableView: UITableView!
     @IBOutlet weak var menuView: MenuView!
+    private var refreshControl: UIRefreshControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,19 @@ class IllustViewController: UIViewController, UITableViewDelegate, UITableViewDa
         illustTableView.allowsSelection = false
 
         prepareMenuView()
+        reloadAnimationSetting()
+    }
+
+    func reloadAnimationSetting() {
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.attributedTitle = NSAttributedString(string: "引っ張って更新")
+        self.refreshControl.addTarget(self, action: #selector(IllustViewController.refresh), forControlEvents: UIControlEvents.ValueChanged)
+        self.illustTableView.addSubview(refreshControl)
+    }
+
+    func refresh() {
+        // ココに更新処理
+        refreshControl.endRefreshing() // 更新終了
     }
 
     // Section num
@@ -71,8 +86,17 @@ class IllustViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     /// Handle the menuView touch event.
     @objc(handleButton:)
-    internal func handleButton(button: UIButton) {
-        print("Hit Button \(button)")
+    func touchButton(sender: UIButton) {
+        switch sender.tag {
+        case 1:
+            makeIllustView()
+        case 2:
+            callCamera()
+        case 3:
+            callAlbum()
+        default:
+            break
+        }
     }
 
     /// General preparation statements are placed here.
@@ -92,6 +116,7 @@ class IllustViewController: UIViewController, UITableViewDelegate, UITableViewDa
         btn1.setImage(image, forState: .Normal)
         btn1.setImage(image, forState: .Highlighted)
         btn1.addTarget(self, action: #selector(handleMenu), forControlEvents: .TouchUpInside)
+        btn1.tag = 0
         menuView.addSubview(btn1)
 
         image = UIImage(named: "illust")?.imageWithRenderingMode(.AlwaysTemplate)
@@ -104,7 +129,8 @@ class IllustViewController: UIViewController, UITableViewDelegate, UITableViewDa
         btn2.borderWidth = 1
         btn2.setImage(image, forState: .Normal)
         btn2.setImage(image, forState: .Highlighted)
-        btn2.addTarget(self, action: #selector(handleButton), forControlEvents: .TouchUpInside)
+        btn2.addTarget(self, action: #selector(IllustViewController.touchButton(_:)), forControlEvents: .TouchUpInside)
+        btn2.tag = 1
         menuView.addSubview(btn2)
 
         image = UIImage(named: "camera")?.imageWithRenderingMode(.AlwaysTemplate)
@@ -117,7 +143,8 @@ class IllustViewController: UIViewController, UITableViewDelegate, UITableViewDa
         btn3.borderWidth = 1
         btn3.setImage(image, forState: .Normal)
         btn3.setImage(image, forState: .Highlighted)
-        btn3.addTarget(self, action: #selector(handleButton), forControlEvents: .TouchUpInside)
+        btn3.addTarget(self, action: #selector(IllustViewController.touchButton(_:)), forControlEvents: .TouchUpInside)
+        btn3.tag = 2
         menuView.addSubview(btn3)
 
         image = UIImage(named: "upload")?.imageWithRenderingMode(.AlwaysTemplate)
@@ -130,7 +157,8 @@ class IllustViewController: UIViewController, UITableViewDelegate, UITableViewDa
         btn4.borderWidth = 1
         btn4.setImage(image, forState: .Normal)
         btn4.setImage(image, forState: .Highlighted)
-        btn4.addTarget(self, action: #selector(handleButton), forControlEvents: .TouchUpInside)
+        btn4.addTarget(self, action: #selector(IllustViewController.touchButton(_:)), forControlEvents: .TouchUpInside)
+        btn4.tag = 3
         menuView.addSubview(btn4)
 
         // Initialize the menu and setup the configuration options.
@@ -139,6 +167,50 @@ class IllustViewController: UIViewController, UITableViewDelegate, UITableViewDa
         menuView.menu.views = [btn1, btn2, btn3, btn4]
     }
     // ----------     ----------
+
+    func makeIllustView() {
+        let signatureVC = EPSignatureViewController(signatureDelegate: self, showsDate: true, showsSaveSignatureOption: false)
+        signatureVC.subtitleText = "イラストで今日の思い出を残そう！"
+        signatureVC.title = "イラスト"
+        let nav = UINavigationController(rootViewController: signatureVC)
+        presentViewController(nav, animated: true, completion: nil)
+    }
+
+    func epSignature(_: EPSignatureViewController, didCancel error: NSError) {
+        print("User canceled")
+    }
+
+    func epSignature(_: EPSignatureViewController, didSign signatureImage: UIImage, boundingRect: CGRect) {
+        print(signatureImage)
+//        imgViewSignature.image = signatureImage
+    }
+
+    func callCamera() { // #360
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+            let ip = UIImagePickerController()
+            ip.sourceType = UIImagePickerControllerSourceType.Camera
+            ip.allowsEditing = false
+            self.presentViewController(ip, animated: true, completion: nil)
+        }
+    }
+
+    func callAlbum() { // #380
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+            let ip = UIImagePickerController()
+            ip.delegate = self
+            ip.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            self.presentViewController(ip, animated: true, completion: nil)
+        }
+    }
+
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
+        if info[UIImagePickerControllerOriginalImage] != nil {
+            let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+            print(image)
+            NSLog("get image")
+        }
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

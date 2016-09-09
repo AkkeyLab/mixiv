@@ -1,10 +1,14 @@
 PODS:
+  - ASAutoResizingTextView (0.1.11)
+  - EPSignature (1.0.2)
   - GuttlerPageControl (0.1.1)
   - Material (1.42.9)
   - PDFramework (1.0.0)
   - RAMAnimatedTabBarController (1.5.3)
 
 DEPENDENCIES:
+  - ASAutoResizingTextView
+  - EPSignature
   - GuttlerPageControl (~> 0.1.1)
   - Material (~> 1.42)
   - PDFramework (from `https://gitlab.planningdev.com/planningdev/iOS_PDFramework.git`)
@@ -20,6 +24,8 @@ CHECKOUT OPTIONS:
     :git: https://gitlab.planningdev.com/planningdev/iOS_PDFramework.git
 
 SPEC CHECKSUMS:
+  ASAutoResizingTextView: 30df3b09b02b3a01fdd6db483bafefd8f296c294
+  EPSignature: 1f925f20b837046de46b4d396bc6e432ea383908
   GuttlerPageControl: 35ad42e426fda71cea447c6ec2e848085f3fcd2c
   Material: a84ed893b7785f0d3c8d568e88c055f82b436473
   PDFramework: 091eaa2f4273686b4cd2b1185c4cd923037e4399
