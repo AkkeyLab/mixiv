@@ -10,9 +10,17 @@ import UIKit
 
 class StoryTableCellView: UITableViewCell {
 
-    class func instance() -> FavoriteTableCellView {
+    @IBOutlet weak var userIconViewLeft: UIImageView!
+    @IBOutlet weak var userIconViewRight: UIImageView!
 
-        return UINib(nibName: "StoryTableCell", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! FavoriteTableCellView
+    @IBOutlet weak var titleLabelRight: UILabel!
+    @IBOutlet weak var textLabelRight: UILabel!
+    @IBOutlet weak var titleLabelLeft: UILabel!
+    @IBOutlet weak var textLabelLeft: UILabel!
+
+    class func instance() -> StoryTableCellView {
+
+        return UINib(nibName: "StoryTableCell", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! StoryTableCellView
     }
 
     /*

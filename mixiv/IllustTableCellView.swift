@@ -14,9 +14,9 @@ class IllustTableCellView: UITableViewCell {
     @IBOutlet weak var illustViewRight: UIImageView!
     @IBOutlet weak var userIconViewRight: UIImageView!
 
-    class func instance() -> FavoriteTableCellView {
+    class func instance() -> IllustTableCellView {
 
-        return UINib(nibName: "IllustTableCell", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! FavoriteTableCellView
+        return UINib(nibName: "IllustTableCell", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! IllustTableCellView
     }
 
     /*
