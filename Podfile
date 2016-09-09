@@ -7,6 +7,7 @@ target 'mixiv' do
   pod 'GuttlerPageControl', '~> 0.1.1'
   pod 'PDFramework', :git => 'https://gitlab.planningdev.com/planningdev/iOS_PDFramework.git'
   pod 'RAMAnimatedTabBarController'
+  pod 'Material', '~> 1.42'
 end
 
 target 'mixivTests' do

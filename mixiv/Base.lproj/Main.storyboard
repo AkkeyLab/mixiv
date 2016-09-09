@@ -102,10 +102,19 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EdC-mq-cjK" customClass="MenuView" customModule="Material">
+                                <rect key="frame" x="528" y="483" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="4EX-s4-wCt"/>
+                                    <constraint firstAttribute="height" constant="60" id="wQB-dn-tEi"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="c9X-Zc-0ML" firstAttribute="top" secondItem="EdC-mq-cjK" secondAttribute="bottom" constant="8" id="6A5-7c-uob"/>
                             <constraint firstItem="c9X-Zc-0ML" firstAttribute="top" secondItem="Hem-BV-4et" secondAttribute="bottom" id="LkL-R9-JWs"/>
+                            <constraint firstItem="EdC-mq-cjK" firstAttribute="trailing" secondItem="trw-vS-hBT" secondAttribute="trailingMargin" constant="8" id="odw-Wu-8rQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hem-BV-4et" secondAttribute="trailing" constant="-20" id="otK-DT-y20"/>
                             <constraint firstItem="Hem-BV-4et" firstAttribute="leading" secondItem="trw-vS-hBT" secondAttribute="leadingMargin" constant="-20" id="qJY-Ic-3Cb"/>
                             <constraint firstItem="Hem-BV-4et" firstAttribute="top" secondItem="HK6-Dv-Kx6" secondAttribute="bottom" id="sea-7E-4Hn"/>
@@ -115,6 +124,7 @@
                     <navigationItem key="navigationItem" title="イラスト" id="QAI-QI-pnf"/>
                     <connections>
                         <outlet property="illustTableView" destination="Hem-BV-4et" id="dKn-7c-bLZ"/>
+                        <outlet property="menuView" destination="EdC-mq-cjK" id="2rL-0L-bd3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6C-KE-qBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -137,10 +147,19 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KsQ-Of-4f1" customClass="MenuView" customModule="Material">
+                                <rect key="frame" x="528" y="483" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="FlY-n2-QeB"/>
+                                    <constraint firstAttribute="width" constant="60" id="P7a-Gd-dzQ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="KsQ-Of-4f1" firstAttribute="trailing" secondItem="ne6-lm-4TV" secondAttribute="trailingMargin" constant="8" id="2x0-S6-O2W"/>
                             <constraint firstItem="wRI-eR-uhB" firstAttribute="leading" secondItem="ne6-lm-4TV" secondAttribute="leadingMargin" constant="-20" id="4dy-yg-Mp8"/>
+                            <constraint firstItem="gKJ-Hf-HlW" firstAttribute="top" secondItem="KsQ-Of-4f1" secondAttribute="bottom" constant="8" id="NgJ-he-nAG"/>
                             <constraint firstItem="gKJ-Hf-HlW" firstAttribute="top" secondItem="wRI-eR-uhB" secondAttribute="bottom" id="dDe-Eq-AvJ"/>
                             <constraint firstItem="wRI-eR-uhB" firstAttribute="top" secondItem="XTj-gc-kPV" secondAttribute="bottom" id="lYR-SY-kjb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wRI-eR-uhB" secondAttribute="trailing" constant="-20" id="za3-7r-YfO"/>
@@ -149,6 +168,7 @@
                     <tabBarItem key="tabBarItem" title="シナリオ" image="story" id="I3M-GO-Ufh" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
                     <navigationItem key="navigationItem" title="シナリオ" id="NCN-SU-RAk"/>
                     <connections>
+                        <outlet property="menuView" destination="KsQ-Of-4f1" id="NrF-rn-EOL"/>
                         <outlet property="storyTableView" destination="wRI-eR-uhB" id="G4G-yj-RJS"/>
                     </connections>
                 </viewController>
