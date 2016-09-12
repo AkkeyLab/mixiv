@@ -85,8 +85,13 @@ class StoryViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     /// Handle the menuView touch event.
     @objc(handleButton:)
-    internal func handleButton(button: UIButton) {
-        print("Hit Button \(button)")
+    func touchButton(sender: UIButton) {
+        switch sender.tag {
+        case 1:
+            callEditStory()
+        default:
+            break
+        }
     }
 
     /// General preparation statements are placed here.
@@ -106,6 +111,7 @@ class StoryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         btn1.setImage(image, forState: .Normal)
         btn1.setImage(image, forState: .Highlighted)
         btn1.addTarget(self, action: #selector(handleMenu), forControlEvents: .TouchUpInside)
+        btn1.tag = 0
         menuView.addSubview(btn1)
 
         image = UIImage(named: "illust")?.imageWithRenderingMode(.AlwaysTemplate)
@@ -118,7 +124,8 @@ class StoryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         btn2.borderWidth = 1
         btn2.setImage(image, forState: .Normal)
         btn2.setImage(image, forState: .Highlighted)
-        btn2.addTarget(self, action: #selector(handleButton), forControlEvents: .TouchUpInside)
+        btn2.addTarget(self, action: #selector(StoryViewController.touchButton(_:)), forControlEvents: .TouchUpInside)
+        btn2.tag = 1
         menuView.addSubview(btn2)
 
         // Initialize the menu and setup the configuration options.
@@ -127,6 +134,13 @@ class StoryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         menuView.menu.views = [btn1, btn2]
     }
     // ----------     ----------
+
+    func callEditStory() {
+        let storyboard: UIStoryboard = UIStoryboard(name: "EditStory", bundle: NSBundle.mainBundle())
+        let editStoryViewController: EditStoryViewController = storyboard.instantiateInitialViewController() as! EditStoryViewController
+
+        self.navigationController?.pushViewController(editStoryViewController, animated: true)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		668BECC41D831C0800076E8E /* EditStory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 668BECC31D831C0800076E8E /* EditStory.storyboard */; };
+		668BECC61D831C3600076E8E /* EditStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668BECC51D831C3600076E8E /* EditStoryViewController.swift */; };
 		66DF19121D7BD26000253B39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF19111D7BD26000253B39 /* AppDelegate.swift */; };
 		66DF19141D7BD26000253B39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF19131D7BD26000253B39 /* ViewController.swift */; };
 		66DF19171D7BD26000253B39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66DF19151D7BD26000253B39 /* Main.storyboard */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		3A2E95B2F1444539B0B81D52 /* Pods_mixiv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mixiv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61FB2405EA5B625F9A93739C /* Pods-mixiv.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mixiv.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mixiv/Pods-mixiv.debug.xcconfig"; sourceTree = "<group>"; };
+		668BECC31D831C0800076E8E /* EditStory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditStory.storyboard; sourceTree = "<group>"; };
+		668BECC51D831C3600076E8E /* EditStoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditStoryViewController.swift; sourceTree = "<group>"; };
 		66DF190E1D7BD26000253B39 /* mixiv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mixiv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66DF19111D7BD26000253B39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66DF19131D7BD26000253B39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 				66DF19D61D80762400253B39 /* IllustTableCellView.swift */,
 				66DF19DB1D81421B00253B39 /* StoryTableCell.xib */,
 				66DF19DA1D81421A00253B39 /* StoryTableCellView.swift */,
+				668BECC31D831C0800076E8E /* EditStory.storyboard */,
+				668BECC51D831C3600076E8E /* EditStoryViewController.swift */,
 			);
 			path = mixiv;
 			sourceTree = "<group>";
@@ -297,6 +303,7 @@
 			files = (
 				66DF191C1D7BD26000253B39 /* LaunchScreen.storyboard in Resources */,
 				66DF19421D7C1C3C00253B39 /* Advertisement.xib in Resources */,
+				668BECC41D831C0800076E8E /* EditStory.storyboard in Resources */,
 				66DF19191D7BD26000253B39 /* Assets.xcassets in Resources */,
 				66DF19D91D80762400253B39 /* IllustTableCell.xib in Resources */,
 				66DF19DD1D81421B00253B39 /* StoryTableCell.xib in Resources */,
@@ -384,6 +391,7 @@
 				66DF19401D7C17B700253B39 /* HomeViewController.swift in Sources */,
 				66DF19D11D80751D00253B39 /* StoryViewController.swift in Sources */,
 				66DF19CF1D80750200253B39 /* IllustViewController.swift in Sources */,
+				668BECC61D831C3600076E8E /* EditStoryViewController.swift in Sources */,
 				66DF19D51D80754500253B39 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

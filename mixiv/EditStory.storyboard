@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0e4-mF-zlU">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Edit Story View Controller-->
+        <scene sceneID="qTX-ZK-Acb">
+            <objects>
+                <viewController id="0e4-mF-zlU" customClass="EditStoryViewController" customModule="mixiv" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TIs-ze-b9D"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZKR-rH-3CN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0oY-de-sf5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIM-er-BVi">
+                                <rect key="frame" x="0.0" y="530" width="600" height="70"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fqL-WK-B50" customClass="ASAutoResizingTextView" customModule="ASAutoResizingTextView">
+                                        <rect key="frame" x="20" y="17" width="481" height="36"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="B88-wW-Omq"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxTextViewHeight">
+                                                <real key="value" value="200"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMQ-mO-pr8">
+                                        <rect key="frame" x="516" y="20" width="76" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="76" id="3Mx-0N-aZq"/>
+                                            <constraint firstAttribute="height" constant="30" id="dFT-O3-v0X"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Send">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25059767319999998" green="0.28169338459999999" blue="0.48590686280000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="0jF-vW-q81"/>
+                                    <constraint firstItem="fqL-WK-B50" firstAttribute="centerY" secondItem="gIM-er-BVi" secondAttribute="centerY" id="1HY-pI-shR"/>
+                                    <constraint firstItem="DMQ-mO-pr8" firstAttribute="leading" secondItem="fqL-WK-B50" secondAttribute="trailing" constant="15" id="Dzg-1x-uFa"/>
+                                    <constraint firstAttribute="trailing" secondItem="DMQ-mO-pr8" secondAttribute="trailing" constant="8" id="eu7-AF-IFc"/>
+                                    <constraint firstItem="DMQ-mO-pr8" firstAttribute="centerY" secondItem="gIM-er-BVi" secondAttribute="centerY" id="rYB-CW-PeF"/>
+                                    <constraint firstItem="fqL-WK-B50" firstAttribute="leading" secondItem="gIM-er-BVi" secondAttribute="leading" constant="20" id="xnJ-WT-19f"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gIM-er-BVi" firstAttribute="leading" secondItem="0oY-de-sf5" secondAttribute="leading" id="Imv-gv-mEZ"/>
+                            <constraint firstAttribute="trailing" secondItem="gIM-er-BVi" secondAttribute="trailing" id="PZ0-6x-RFh"/>
+                            <constraint firstItem="ZKR-rH-3CN" firstAttribute="top" secondItem="gIM-er-BVi" secondAttribute="bottom" id="awy-QJ-aS0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomSpacingConstraint" destination="awy-QJ-aS0" id="QlN-J5-pDv"/>
+                        <outlet property="sendBar" destination="gIM-er-BVi" id="Rt6-GR-97o"/>
+                        <outlet property="sendBarHeightConstraint" destination="0jF-vW-q81" id="JXn-sC-FAl"/>
+                        <outlet property="sendButton" destination="DMQ-mO-pr8" id="6J9-G3-8w8"/>
+                        <outlet property="sendTextView" destination="fqL-WK-B50" id="5nJ-KN-BvR"/>
+                        <outlet property="sendTextViewHeightConstraint" destination="B88-wW-Omq" id="Pmo-zC-qZP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GMF-wf-EYY" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="450" y="553"/>
+        </scene>
+    </scenes>
+</document>
