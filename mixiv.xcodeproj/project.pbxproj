@@ -12,6 +12,8 @@
 		66B56BD41D8D07A800068A4F /* PeerListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B56BD31D8D07A800068A4F /* PeerListViewController.storyboard */; };
 		66B56BD61D8D07C800068A4F /* PeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B56BD51D8D07C800068A4F /* PeerListViewController.swift */; };
 		66B56BD81D8D1BFF00068A4F /* BroadcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B56BD71D8D1BFF00068A4F /* BroadcastViewController.swift */; };
+		66B56BDB1D8D363600068A4F /* PeerListForDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B56BD91D8D363600068A4F /* PeerListForDataViewController.swift */; };
+		66B56BDC1D8D363600068A4F /* PeerListForDataViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B56BDA1D8D363600068A4F /* PeerListForDataViewController.storyboard */; };
 		66DF19121D7BD26000253B39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF19111D7BD26000253B39 /* AppDelegate.swift */; };
 		66DF19141D7BD26000253B39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF19131D7BD26000253B39 /* ViewController.swift */; };
 		66DF19171D7BD26000253B39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66DF19151D7BD26000253B39 /* Main.storyboard */; };
@@ -61,6 +63,8 @@
 		66B56BD31D8D07A800068A4F /* PeerListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PeerListViewController.storyboard; sourceTree = "<group>"; };
 		66B56BD51D8D07C800068A4F /* PeerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerListViewController.swift; sourceTree = "<group>"; };
 		66B56BD71D8D1BFF00068A4F /* BroadcastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BroadcastViewController.swift; sourceTree = "<group>"; };
+		66B56BD91D8D363600068A4F /* PeerListForDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerListForDataViewController.swift; sourceTree = "<group>"; };
+		66B56BDA1D8D363600068A4F /* PeerListForDataViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PeerListForDataViewController.storyboard; sourceTree = "<group>"; };
 		66DF190E1D7BD26000253B39 /* mixiv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mixiv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66DF19111D7BD26000253B39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66DF19131D7BD26000253B39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				66B56BD31D8D07A800068A4F /* PeerListViewController.storyboard */,
 				66B56BD51D8D07C800068A4F /* PeerListViewController.swift */,
 				66B56BD71D8D1BFF00068A4F /* BroadcastViewController.swift */,
+				66B56BD91D8D363600068A4F /* PeerListForDataViewController.swift */,
+				66B56BDA1D8D363600068A4F /* PeerListForDataViewController.storyboard */,
 			);
 			path = mixiv;
 			sourceTree = "<group>";
@@ -319,6 +325,7 @@
 				66DF19191D7BD26000253B39 /* Assets.xcassets in Resources */,
 				66DF19D91D80762400253B39 /* IllustTableCell.xib in Resources */,
 				66DF19DD1D81421B00253B39 /* StoryTableCell.xib in Resources */,
+				66B56BDC1D8D363600068A4F /* PeerListForDataViewController.storyboard in Resources */,
 				66DF198E1D7F1D0000253B39 /* FavoriteTableCell.xib in Resources */,
 				66DF19171D7BD26000253B39 /* Main.storyboard in Resources */,
 			);
@@ -394,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66B56BD81D8D1BFF00068A4F /* BroadcastViewController.swift in Sources */,
+				66B56BDB1D8D363600068A4F /* PeerListForDataViewController.swift in Sources */,
 				66DF19D81D80762400253B39 /* IllustTableCellView.swift in Sources */,
 				66DF19D31D80752E00253B39 /* StoreViewController.swift in Sources */,
 				66DF19441D7C1DF700253B39 /* AdvertisementView.swift in Sources */,

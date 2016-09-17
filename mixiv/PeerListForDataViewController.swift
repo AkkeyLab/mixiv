@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PeerListViewController: UITableViewController {
+class PeerListForDataViewController: UITableViewController {
 
     var items: [AnyObject]?
     weak var callback: UIViewController?
@@ -53,20 +53,19 @@ class PeerListViewController: UITableViewController {
         let strTo: String = (self.items![indexPath.row] as? String)!
         if self.callback != nil {
             self.callback?.dismissViewControllerAnimated(true, completion: { () -> Void in
-                if (self.callback?.respondsToSelector("call:"))! == true {
+//                if (self.callback?.respondsToSelector("call:"))! == true {
+//                    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), { () -> Void in
+//                        let view = self.callback as! StoryViewController
+//                        view.call(strTo)
+//                    })
+//                }
+
+                if (self.callback?.respondsToSelector("connect:"))! == true {
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), { () -> Void in
-                        let view = self.callback as! IllustViewController
-                        view.call(strTo)
+                        let view = self.callback as! StoryViewController
+                        view.connect(strTo)
                     })
                 }
-
-//                if (self.callback?.respondsToSelector("connect:"))! == true {
-//                    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), { () -> Void in
-//                        let view = self.callback as! IllustViewController
-//                        view.connect(strTo)
-//                    })
-//
-//                }
             })
 
         }
