@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		668BECC41D831C0800076E8E /* EditStory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 668BECC31D831C0800076E8E /* EditStory.storyboard */; };
 		668BECC61D831C3600076E8E /* EditStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668BECC51D831C3600076E8E /* EditStoryViewController.swift */; };
+		66B56BD41D8D07A800068A4F /* PeerListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B56BD31D8D07A800068A4F /* PeerListViewController.storyboard */; };
+		66B56BD61D8D07C800068A4F /* PeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B56BD51D8D07C800068A4F /* PeerListViewController.swift */; };
+		66B56BD81D8D1BFF00068A4F /* BroadcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B56BD71D8D1BFF00068A4F /* BroadcastViewController.swift */; };
 		66DF19121D7BD26000253B39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF19111D7BD26000253B39 /* AppDelegate.swift */; };
 		66DF19141D7BD26000253B39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF19131D7BD26000253B39 /* ViewController.swift */; };
 		66DF19171D7BD26000253B39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66DF19151D7BD26000253B39 /* Main.storyboard */; };
@@ -54,6 +57,10 @@
 		61FB2405EA5B625F9A93739C /* Pods-mixiv.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mixiv.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mixiv/Pods-mixiv.debug.xcconfig"; sourceTree = "<group>"; };
 		668BECC31D831C0800076E8E /* EditStory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditStory.storyboard; sourceTree = "<group>"; };
 		668BECC51D831C3600076E8E /* EditStoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditStoryViewController.swift; sourceTree = "<group>"; };
+		66B56BD21D8D063C00068A4F /* mixiv_Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mixiv_Bridging-Header.h"; sourceTree = "<group>"; };
+		66B56BD31D8D07A800068A4F /* PeerListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PeerListViewController.storyboard; sourceTree = "<group>"; };
+		66B56BD51D8D07C800068A4F /* PeerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerListViewController.swift; sourceTree = "<group>"; };
+		66B56BD71D8D1BFF00068A4F /* BroadcastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BroadcastViewController.swift; sourceTree = "<group>"; };
 		66DF190E1D7BD26000253B39 /* mixiv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mixiv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66DF19111D7BD26000253B39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66DF19131D7BD26000253B39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +170,10 @@
 				66DF19DA1D81421A00253B39 /* StoryTableCellView.swift */,
 				668BECC31D831C0800076E8E /* EditStory.storyboard */,
 				668BECC51D831C3600076E8E /* EditStoryViewController.swift */,
+				66B56BD21D8D063C00068A4F /* mixiv_Bridging-Header.h */,
+				66B56BD31D8D07A800068A4F /* PeerListViewController.storyboard */,
+				66B56BD51D8D07C800068A4F /* PeerListViewController.swift */,
+				66B56BD71D8D1BFF00068A4F /* BroadcastViewController.swift */,
 			);
 			path = mixiv;
 			sourceTree = "<group>";
@@ -301,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66B56BD41D8D07A800068A4F /* PeerListViewController.storyboard in Resources */,
 				66DF191C1D7BD26000253B39 /* LaunchScreen.storyboard in Resources */,
 				66DF19421D7C1C3C00253B39 /* Advertisement.xib in Resources */,
 				668BECC41D831C0800076E8E /* EditStory.storyboard in Resources */,
@@ -381,12 +393,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66B56BD81D8D1BFF00068A4F /* BroadcastViewController.swift in Sources */,
 				66DF19D81D80762400253B39 /* IllustTableCellView.swift in Sources */,
 				66DF19D31D80752E00253B39 /* StoreViewController.swift in Sources */,
 				66DF19441D7C1DF700253B39 /* AdvertisementView.swift in Sources */,
 				66DF19DC1D81421B00253B39 /* StoryTableCellView.swift in Sources */,
 				66DF19141D7BD26000253B39 /* ViewController.swift in Sources */,
 				66DF19901D7F228700253B39 /* FavoriteTableCellView.swift in Sources */,
+				66B56BD61D8D07C800068A4F /* PeerListViewController.swift in Sources */,
 				66DF19121D7BD26000253B39 /* AppDelegate.swift in Sources */,
 				66DF19401D7C17B700253B39 /* HomeViewController.swift in Sources */,
 				66DF19D11D80751D00253B39 /* StoryViewController.swift in Sources */,
@@ -542,6 +556,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.akkeylab.mixiv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "mixiv/mixiv_Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -556,6 +571,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.akkeylab.mixiv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "mixiv/mixiv_Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

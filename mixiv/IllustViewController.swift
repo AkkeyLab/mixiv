@@ -9,11 +9,23 @@
 import UIKit
 import Material
 import EPSignature
+import Foundation
+import AVFoundation
 
 class IllustViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, EPSignatureDelegate {
     @IBOutlet weak var illustTableView: UITableView!
     @IBOutlet weak var menuView: MenuView!
+    @IBOutlet weak var vwVideo: SKWVideo!
+    @IBOutlet weak var livePlayButton: UIButton!
+
     private var refreshControl: UIRefreshControl!
+    private var _peer: SKWPeer?
+    private var _msLocal: SKWMediaStream?
+    private var _msRemote: SKWMediaStream?
+    private var _mediaConnection: SKWMediaConnection?
+    private var _id: String? = nil
+    private var _bEstablished: Bool = false
+    private var _listPeerIds: Array<String> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +41,7 @@ class IllustViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
         prepareMenuView()
         reloadAnimationSetting()
+        webRTC()
     }
 
     func reloadAnimationSetting() {
@@ -212,8 +225,148 @@ class IllustViewController: UIViewController, UITableViewDelegate, UITableViewDa
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
 
+    // ---------- NTT Communications ----------
+    func webRTC() {
+        vwVideo.tag = ViewTag.TAG_REMOTE_VIDEO.hashValue
+
+        let option: SKWPeerOption = SKWPeerOption.init()
+        option.key = "ae7068ea-8871-45c3-b157-23be59c73d5f"
+        option.domain = "akkeylab"
+
+        _peer = SKWPeer.init(options: option)
+
+        // Connect result
+        _peer?.on(SKWPeerEventEnum.PEER_EVENT_ERROR, callback: { (obj: NSObject!) -> Void in
+            let error: SKWPeerError = obj as! SKWPeerError
+            print("\(error)")
+        })
+
+        _peer?.on(SKWPeerEventEnum.PEER_EVENT_OPEN, callback: { (obj: NSObject!) -> Void in
+            self._id = obj as? String
+            dispatch_async(dispatch_get_main_queue(), {
+//                self.idLabel.text = "your ID: \n\(self._id!)"
+            })
+        })
+
+        // Call your
+        _peer?.on(SKWPeerEventEnum.PEER_EVENT_CALL, callback: { (obj: NSObject!) -> Void in
+            self._mediaConnection = obj as? SKWMediaConnection
+            self._mediaConnection?.answer(self._msLocal);
+            self._bEstablished = true
+//            self.updateUI()
+        })
+    }
+
+    func setMediaCallbacks(media: SKWMediaConnection) {
+        media.on(SKWMediaConnectionEventEnum.MEDIACONNECTION_EVENT_STREAM, callback: { (obj: NSObject!) -> Void in
+            self._msRemote = obj as? SKWMediaStream
+
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                let remoteVideoView: SKWVideo = self.vwVideo.viewWithTag(ViewTag.TAG_REMOTE_VIDEO.hashValue) as! SKWVideo
+                remoteVideoView.hidden = false
+                remoteVideoView.addSrc(self._msRemote, track: 0)
+            })
+        })
+
+        media.on(SKWMediaConnectionEventEnum.MEDIACONNECTION_EVENT_CLOSE, callback: { (obj: NSObject!) -> Void in
+            self._msRemote = obj as? SKWMediaStream
+
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                let remoteVideoView: SKWVideo = self.vwVideo.viewWithTag(ViewTag.TAG_REMOTE_VIDEO.hashValue) as! SKWVideo
+                remoteVideoView.removeSrc(self._msRemote, track: 0)
+                self._msRemote = nil
+                self._mediaConnection = nil
+                self._bEstablished = false
+                remoteVideoView.hidden = true
+            })
+//            self.updateUI()
+        })
+    }
+
+    func getPeerList() {
+        if (_peer == nil) || (_id == nil) || (_id?.characters.count == 0) {
+            return
+        }
+
+        _peer?.listAllPeers({ (peers: [AnyObject]!) -> Void in
+            self._listPeerIds = []
+            let peersArray: [String] = peers as! [String]
+            for strValue: String in peersArray {
+                print(strValue)
+
+                if strValue == self._id {
+                    continue
+                }
+
+                self._listPeerIds.append(strValue)
+            }
+
+            if self._listPeerIds.count > 0 {
+                self.showPeerDialog()
+            }
+
+        })
+    }
+
+    // Start video call
+    func call(strDestId: String) {
+        let option = SKWCallOption()
+        _mediaConnection = _peer!.callWithId(strDestId, stream: _msLocal, options: option)
+        if _mediaConnection != nil {
+            self.setMediaCallbacks(self._mediaConnection!)
+            _bEstablished = true
+        }
+//        self.updateUI()
+    }
+
+    // End vide call
+    func closeChat() {
+        if _mediaConnection != nil {
+            if _msRemote != nil {
+                let remoteVideoView: SKWVideo = self.view.viewWithTag(ViewTag.TAG_REMOTE_VIDEO.hashValue) as! SKWVideo
+
+                remoteVideoView .removeSrc(_msRemote, track: 0)
+                _msRemote?.close()
+                _msRemote = nil
+            }
+            _mediaConnection?.close()
+        }
+    }
+
+    func showPeerDialog() {
+        let vc: PeerListViewController = PeerListViewController()
+        vc.items = _listPeerIds
+        vc.callback = self
+
+        let nc: UINavigationController = UINavigationController.init(rootViewController: vc)
+
+        dispatch_async(dispatch_get_main_queue(), {
+            self.presentViewController(nc, animated: true, completion: nil)
+        })
+
+    }
+
+    @IBAction func pushLivePlayButton(sender: AnyObject) {
+        if self._mediaConnection == nil {
+            self.getPeerList()
+        } else {
+            self.performSelectorInBackground(#selector(IllustViewController.closeChat), withObject: nil)
+        }
+    }
+    // ---------- NTT Communications ----------
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
+
+enum ViewTag: UInt {
+    case TAG_ID = 1000
+    case TAG_WEBRTC_ACTION
+    case TAG_REMOTE_VIDEO
+    case TAG_LOCAL_VIDEO
+}
+
+extension IllustViewController: UIAlertViewDelegate {
 }

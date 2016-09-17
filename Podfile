@@ -11,6 +11,7 @@ target 'mixiv' do
   pod 'EPSignature'
 # pod 'PullToMakeFlight'
   pod 'ASAutoResizingTextView'
+  pod 'SkyWay-iOS-SDK'
 end
 
 target 'mixivTests' do

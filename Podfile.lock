@@ -5,6 +5,7 @@ PODS:
   - Material (1.42.9)
   - PDFramework (1.0.0)
   - RAMAnimatedTabBarController (1.5.3)
+  - SkyWay-iOS-SDK (0.2.2)
 
 DEPENDENCIES:
   - ASAutoResizingTextView
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - Material (~> 1.42)
   - PDFramework (from `https://gitlab.planningdev.com/planningdev/iOS_PDFramework.git`)
   - RAMAnimatedTabBarController
+  - SkyWay-iOS-SDK
 
 EXTERNAL SOURCES:
   PDFramework:
@@ -30,5 +32,6 @@ SPEC CHECKSUMS:
   Material: a84ed893b7785f0d3c8d568e88c055f82b436473
   PDFramework: 091eaa2f4273686b4cd2b1185c4cd923037e4399
   RAMAnimatedTabBarController: 04b624cf8958a0032bf7fa9c0f2c515f59d30b9c
+  SkyWay-iOS-SDK: 6762f38ad67c9e1689d75df42ea9cd71631ef293
 
 COCOAPODS: 0.39.0
