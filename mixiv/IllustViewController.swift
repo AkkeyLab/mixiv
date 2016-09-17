@@ -253,7 +253,6 @@ class IllustViewController: UIViewController, UITableViewDelegate, UITableViewDa
             self._mediaConnection = obj as? SKWMediaConnection
             self._mediaConnection?.answer(self._msLocal);
             self._bEstablished = true
-//            self.updateUI()
         })
     }
 
@@ -279,7 +278,6 @@ class IllustViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 self._bEstablished = false
                 remoteVideoView.hidden = true
             })
-//            self.updateUI()
         })
     }
 
@@ -297,14 +295,11 @@ class IllustViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 if strValue == self._id {
                     continue
                 }
-
                 self._listPeerIds.append(strValue)
             }
-
             if self._listPeerIds.count > 0 {
                 self.showPeerDialog()
             }
-
         })
     }
 
@@ -316,14 +311,13 @@ class IllustViewController: UIViewController, UITableViewDelegate, UITableViewDa
             self.setMediaCallbacks(self._mediaConnection!)
             _bEstablished = true
         }
-//        self.updateUI()
     }
 
     // End vide call
     func closeChat() {
         if _mediaConnection != nil {
             if _msRemote != nil {
-                let remoteVideoView: SKWVideo = self.view.viewWithTag(ViewTag.TAG_REMOTE_VIDEO.hashValue) as! SKWVideo
+                let remoteVideoView: SKWVideo = vwVideo.viewWithTag(ViewTag.TAG_REMOTE_VIDEO.hashValue) as! SKWVideo
 
                 remoteVideoView .removeSrc(_msRemote, track: 0)
                 _msRemote?.close()
@@ -349,8 +343,10 @@ class IllustViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBAction func pushLivePlayButton(sender: AnyObject) {
         if self._mediaConnection == nil {
             self.getPeerList()
+            livePlayButton.setTitle("選局", forState: UIControlState.Normal)
         } else {
             self.performSelectorInBackground(#selector(IllustViewController.closeChat), withObject: nil)
+            livePlayButton.setTitle("切断", forState: UIControlState.Normal)
         }
     }
     // ---------- NTT Communications ----------
