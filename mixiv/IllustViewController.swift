@@ -343,10 +343,10 @@ class IllustViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBAction func pushLivePlayButton(sender: AnyObject) {
         if self._mediaConnection == nil {
             self.getPeerList()
-            livePlayButton.setTitle("選局", forState: UIControlState.Normal)
+            livePlayButton.setTitle("切断", forState: UIControlState.Normal)
         } else {
             self.performSelectorInBackground(#selector(IllustViewController.closeChat), withObject: nil)
-            livePlayButton.setTitle("切断", forState: UIControlState.Normal)
+            livePlayButton.setTitle("選局", forState: UIControlState.Normal)
         }
     }
     // ---------- NTT Communications ----------
